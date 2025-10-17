@@ -1536,45 +1536,45 @@
         "Use sound theme from system settings": "Usar tema de som das configurações do sistema"
     },
     "Clock show seconds": {
-        "Clock show seconds": ""
+        "Clock show seconds": "Relógio mostra segundos"
     },
     "Command or script to run instead of the standard hibernate procedure": {
-        "Command or script to run instead of the standard hibernate procedure": ""
+        "Command or script to run instead of the standard hibernate procedure": "Comando ou script serão executados em vez do procedimento padrão de hibernação"
     },
     "Command or script to run instead of the standard logout procedure": {
-        "Command or script to run instead of the standard logout procedure": ""
+        "Command or script to run instead of the standard logout procedure": "Comando ou script irão ser executados em vez do procedimento padrão de logout"
     },
     "Command or script to run instead of the standard power off procedure": {
-        "Command or script to run instead of the standard power off procedure": ""
+        "Command or script to run instead of the standard power off procedure": "Comando ou script irão ser executados em vez do procedimento padrão de desligamento"
     },
     "Command or script to run instead of the standard reboot procedure": {
-        "Command or script to run instead of the standard reboot procedure": ""
+        "Command or script to run instead of the standard reboot procedure": "Comando ou script irão ser executados em vez do procedimento padrão de reinicialização"
     },
     "Command or script to run instead of the standard suspend procedure": {
-        "Command or script to run instead of the standard suspend procedure": ""
+        "Command or script to run instead of the standard suspend procedure": "Comando ou script irão ser executados em vez do procedimento de suspensão padrão"
     },
     "Custom Power Actions": {
         "Custom Power Actions": ""
     },
     "Icon Size": {
-        "Icon Size": ""
+        "Icon Size": "Tamanho do Ícone"
     },
     "Individual Batteries": {
-        "Individual Batteries": ""
+        "Individual Batteries": "Baterias Individuais"
     },
     "Left": {
-        "Left": ""
+        "Left": "Esquerda"
     },
     "Show seconds": {
-        "Show seconds": ""
+        "Show seconds": "Mostrar segundos"
     },
     "Sync Mode with Portal": {
-        "Sync Mode with Portal": ""
+        "Sync Mode with Portal": "Sincronizar Modo Com Portal"
     },
     "Sync dark mode with settings portals for system-wide theme hints": {
-        "Sync dark mode with settings portals for system-wide theme hints": ""
+        "Sync dark mode with settings portals for system-wide theme hints": "Sincronize o modo escuro com os portais de configurações para ter indicações de temas em todo o sistema"
     },
     "To Full": {
-        "To Full": ""
+        "To Full": "Para completar"
     }
 }
