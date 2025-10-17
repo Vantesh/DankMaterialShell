@@ -65,6 +65,16 @@ Item {
                                            checked)
                                    }
                     }
+                    DankToggle {
+                        width: parent.width
+                        text: I18n.tr("Window Scrolling")
+                        description: "Scroll through windows, rather than workspaces"
+                        checked: SettingsData.workspaceScrolling
+                        visible: CompositorService.isNiri
+                        onToggled: checked => {
+                            return SettingsData.setWorkspaceScrolling(checked)
+                        }
+                    }
 
                     DankToggle {
                         width: parent.width

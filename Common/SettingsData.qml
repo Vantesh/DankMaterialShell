@@ -99,6 +99,7 @@ Singleton {
 
     property bool showWorkspaceIndex: false
     property bool showWorkspacePadding: false
+    property bool workspaceScrolling: false
     property bool showWorkspaceApps: false
     property int maxWorkspaceIcons: 3
     property bool workspacesPerMonitor: true
@@ -238,6 +239,7 @@ Singleton {
     property bool osdAlwaysShowValue: false
 
     property bool powerActionConfirm: true
+    property string customPowerActionLock: ""
     property string customPowerActionLogout: ""
     property string customPowerActionSuspend: ""
     property string customPowerActionHibernate: ""
@@ -361,6 +363,7 @@ Singleton {
                 ]
                 showWorkspaceIndex = settings.showWorkspaceIndex !== undefined ? settings.showWorkspaceIndex : false
                 showWorkspacePadding = settings.showWorkspacePadding !== undefined ? settings.showWorkspacePadding : false
+                workspaceScrolling = settings.workspaceScrolling !== undefined ? settings.workspaceScrolling : false
                 showWorkspaceApps = settings.showWorkspaceApps !== undefined ? settings.showWorkspaceApps : false
                 maxWorkspaceIcons = settings.maxWorkspaceIcons !== undefined ? settings.maxWorkspaceIcons : 3
                 workspaceNameIcons = settings.workspaceNameIcons !== undefined ? settings.workspaceNameIcons : ({})
@@ -452,6 +455,7 @@ Singleton {
                 notificationPopupPosition = settings.notificationPopupPosition !== undefined ? settings.notificationPopupPosition : SettingsData.Position.Top
                 osdAlwaysShowValue = settings.osdAlwaysShowValue !== undefined ? settings.osdAlwaysShowValue : false
                 powerActionConfirm = settings.powerActionConfirm !== undefined ? settings.powerActionConfirm : true
+                customPowerActionLock = settings.customPowerActionLock != undefined ? settings.customPowerActionLock : ""
                 customPowerActionLogout = settings.customPowerActionLogout != undefined ? settings.customPowerActionLogout : ""
                 customPowerActionSuspend = settings.customPowerActionSuspend != undefined ? settings.customPowerActionSuspend : ""
                 customPowerActionHibernate = settings.customPowerActionHibernate != undefined ? settings.customPowerActionHibernate : ""
@@ -561,6 +565,7 @@ Singleton {
                                                 "controlCenterShowAudioIcon": controlCenterShowAudioIcon,
                                                 "controlCenterWidgets": controlCenterWidgets,
                                                 "showWorkspaceIndex": showWorkspaceIndex,
+                                                "workspaceScrolling": workspaceScrolling,
                                                 "showWorkspacePadding": showWorkspacePadding,
                                                 "showWorkspaceApps": showWorkspaceApps,
                                                 "maxWorkspaceIcons": maxWorkspaceIcons,
@@ -646,6 +651,7 @@ Singleton {
                                                 "notificationPopupPosition": notificationPopupPosition,
                                                 "osdAlwaysShowValue": osdAlwaysShowValue,
                                                 "powerActionConfirm": powerActionConfirm,
+                                                "customPowerActionLock": customPowerActionLock,
                                                 "customPowerActionLogout": customPowerActionLogout,
                                                 "customPowerActionSuspend": customPowerActionSuspend,
                                                 "customPowerActionHibernate": customPowerActionHibernate,
@@ -692,7 +698,7 @@ Singleton {
             "selectedGpuIndex", "enabledGpuPciIds", "showSystemTray", "showClock",
             "showNotificationButton", "showBattery", "showControlCenterButton",
             "controlCenterShowNetworkIcon", "controlCenterShowBluetoothIcon", "controlCenterShowAudioIcon",
-            "controlCenterWidgets", "showWorkspaceIndex", "showWorkspacePadding", "showWorkspaceApps",
+            "controlCenterWidgets", "showWorkspaceIndex", "workspaceScrolling", "showWorkspacePadding", "showWorkspaceApps",
             "maxWorkspaceIcons", "workspacesPerMonitor", "workspaceNameIcons", "waveProgressEnabled",
             "clockCompactMode", "focusedWindowCompactMode", "runningAppsCompactMode",
             "runningAppsCurrentWorkspace", "clockDateFormat", "lockDateFormat", "mediaSize",
@@ -716,8 +722,8 @@ Singleton {
             "hideBrightnessSlider", "widgetBackgroundColor", "surfaceBase",
             "notificationTimeoutLow", "notificationTimeoutNormal", "notificationTimeoutCritical",
             "notificationPopupPosition", "osdAlwaysShowValue", "powerActionConfirm",
-            "customPowerActionLogout", "customPowerActionSuspend", "customPowerActionHibernate",
-            "customPowerActionReboot", "customPowerActionPowerOff",
+            "customPowerActionLock", "customPowerActionLogout", "customPowerActionSuspend",
+            "customPowerActionHibernate", "customPowerActionReboot", "customPowerActionPowerOff",
             "updaterUseCustomCommand", "updaterCustomCommand", "updaterTerminalAdditionalParams",
             "screenPreferences", "animationSpeed", "acMonitorTimeout", "acLockTimeout",
             "acSuspendTimeout", "acHibernateTimeout", "batteryMonitorTimeout", "batteryLockTimeout",
@@ -1153,6 +1159,11 @@ Singleton {
 
     function setShowWorkspaceIndex(enabled) {
         showWorkspaceIndex = enabled
+        saveSettings()
+    }
+    
+    function setWorkspaceScrolling(enabled) {
+        workspaceScrolling = enabled
         saveSettings()
     }
 
@@ -1710,6 +1721,11 @@ Singleton {
 
     function setPowerActionConfirm(confirm) {
         powerActionConfirm = confirm;
+        saveSettings();
+    }
+
+    function setCustomPowerActionLock(command) {
+        customPowerActionLock = command;
         saveSettings();
     }
 
