@@ -235,7 +235,7 @@ Singleton {
         const terminal = Quickshell.env("TERMINAL") || "xterm"
 
         if (SettingsData.updaterUseCustomCommand && SettingsData.updaterCustomCommand.length > 0) {
-            const updateCommand = `${SettingsData.updaterCustomCommand} && echo "Updates complete! Press Enter to close..." && read`
+            const updateCommand = `${SettingsData.updaterCustomCommand}`
             const termClass = SettingsData.updaterTerminalAdditionalParams
 
             var finalCommand = [terminal]
