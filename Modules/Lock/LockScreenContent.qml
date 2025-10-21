@@ -31,10 +31,7 @@ Item {
     }
 
     Component.onCompleted: {
-        if (demoMode) {
-            pickRandomFact()
-        }
-
+        pickRandomFact()
         WeatherService.addRef()
         UserInfoService.refreshUserInfo()
 
@@ -1110,7 +1107,7 @@ Item {
             anchors.margins: Theme.spacingL
             width: Math.min(parent.width - Theme.spacingXL * 2, implicitWidth)
             text: root.randomFact
-            font.pixelSize: Theme.fontSizeSmall
+            font.pixelSize: Theme.fontSizeMedium
             color: "white"
             opacity: 0.8
             horizontalAlignment: Text.AlignHCenter
