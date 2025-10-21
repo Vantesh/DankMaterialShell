@@ -184,10 +184,10 @@ Singleton {
                 "surfaceContainer": getMatugenColor("surface_container", "#1e2023"),
                 "surfaceContainerHigh": getMatugenColor("surface_container_high", "#292b2f"),
                 "surfaceContainerHighest": getMatugenColor("surface_container_highest", "#343740"),
-                "error": "#F2B8B5",
-                "warning": "#FF9800",
-                "info": "#2196F3",
-                "success": "#4CAF50"
+                "error": getMatugenColor("error", "#F2B8B5"),
+                "warning": getMatugenColor("warning", "#FF9800"),
+                "info": getMatugenColor("info", "#2196F3"),
+                "success": getMatugenColor("success", "#4CAF50")
             }
         } else {
             return StockThemes.getThemeByName(currentTheme, isLightMode)
@@ -336,11 +336,11 @@ Singleton {
 
     readonly property int currentAnimationBaseDuration: {
         if (typeof SettingsData === "undefined") return 500
-        
+
         if (SettingsData.animationSpeed === SettingsData.AnimationSpeed.Custom) {
             return SettingsData.customAnimationDuration
         }
-        
+
         const presetMap = [0, 250, 500, 750]
         return presetMap[SettingsData.animationSpeed] !== undefined ? presetMap[SettingsData.animationSpeed] : 500
     }
