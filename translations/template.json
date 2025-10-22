@@ -1169,6 +1169,13 @@
     "comment": ""
   },
   {
+    "term": "Dismiss",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Display a dock with pinned and running applications that can be positioned at the top, bottom, left, or right edge of the screen",
     "translation": "",
     "context": "",
@@ -2856,6 +2863,13 @@
     "comment": ""
   },
   {
+    "term": "Reload Plugin",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Remove",
     "translation": "",
     "context": "",
@@ -3647,6 +3661,13 @@
     "comment": ""
   },
   {
+    "term": "Uninstall Plugin",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Unpin from Dock",
     "translation": "",
     "context": "",
@@ -3683,6 +3704,13 @@
   },
   {
     "term": "Update All",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Update Plugin",
     "translation": "",
     "context": "",
     "reference": "",
@@ -3872,6 +3900,13 @@
   },
   {
     "term": "Wallpaper",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Wallpapers",
     "translation": "",
     "context": "",
     "reference": "",

@@ -503,6 +503,9 @@
   "Disk Usage": {
     "Disk Usage": "Uso de Disco"
   },
+  "Dismiss": {
+    "Dismiss": ""
+  },
   "Display a dock with pinned and running applications that can be positioned at the top, bottom, left, or right edge of the screen": {
     "Display a dock with pinned and running applications that can be positioned at the top, bottom, left, or right edge of the screen": "Exibir um dock com aplicativos que estão sendo utilizados, e que pode ser posicionada no superior, inferior, esquerda ou direita dos cantos da tela"
   },
@@ -1229,6 +1232,9 @@
   "Refresh": {
     "Refresh": "Recarregar"
   },
+  "Reload Plugin": {
+    "Reload Plugin": ""
+  },
   "Remove": {
     "Remove": "Remover"
   },
@@ -1568,6 +1574,9 @@
   "Turn off monitors after": {
     "Turn off monitors after": "Desligar monitores depois de"
   },
+  "Uninstall Plugin": {
+    "Uninstall Plugin": ""
+  },
   "Unpin from Dock": {
     "Unpin from Dock": "Desafixar do Dock"
   },
@@ -1585,6 +1594,9 @@
   },
   "Update All": {
     "Update All": "Atualizar Tudo"
+  },
+  "Update Plugin": {
+    "Update Plugin": ""
   },
   "Use 24-hour time format instead of 12-hour AM/PM": {
     "Use 24-hour time format instead of 12-hour AM/PM": "Usar relógio de 24 horas em vez de 12 horas com AM/PM"
@@ -1669,6 +1681,9 @@
   },
   "Wallpaper": {
     "Wallpaper": "Papel de parede"
+  },
+  "Wallpapers": {
+    "Wallpapers": ""
   },
   "Wave Progress Bars": {
     "Wave Progress Bars": "Barra de Progresso de Ondas"
