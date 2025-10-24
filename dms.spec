@@ -129,20 +129,47 @@ install -Dm755 %{_builddir}/danklinux-master/bin/${DMS_BINARY} %{buildroot}%{_bi
 # Install dgop binary
 install -Dm755 %{_builddir}/dgop %{buildroot}%{_bindir}/dgop
 
-# Install shell files to XDG config location
-install -dm755 %{buildroot}%{_sysconfdir}/xdg/quickshell/dms
-cp -r * %{buildroot}%{_sysconfdir}/xdg/quickshell/dms/
+# Install shell files to shared data location
+install -dm755 %{buildroot}%{_datadir}/quickshell/dms
+cp -r * %{buildroot}%{_datadir}/quickshell/dms/
 
 # Remove build files
-rm -rf %{buildroot}%{_sysconfdir}/xdg/quickshell/dms/.git*
-rm -f %{buildroot}%{_sysconfdir}/xdg/quickshell/dms/.gitignore
-rm -rf %{buildroot}%{_sysconfdir}/xdg/quickshell/dms/.github
-rm -f %{buildroot}%{_sysconfdir}/xdg/quickshell/dms/*.spec
+rm -rf %{buildroot}%{_datadir}/quickshell/dms/.git*
+rm -f %{buildroot}%{_datadir}/quickshell/dms/.gitignore
+rm -rf %{buildroot}%{_datadir}/quickshell/dms/.github
+rm -f %{buildroot}%{_datadir}/quickshell/dms/*.spec
+
+%posttrans
+# Clean up old installation path from previous versions (only if empty)
+if [ -d "%{_sysconfdir}/xdg/quickshell/dms" ]; then
+    # Remove directories only if empty (preserves any user-added files)
+    rmdir "%{_sysconfdir}/xdg/quickshell/dms" 2>/dev/null || true
+    rmdir "%{_sysconfdir}/xdg/quickshell" 2>/dev/null || true
+    rmdir "%{_sysconfdir}/xdg" 2>/dev/null || true
+fi
+
+# Restart DMS for active users after upgrade
+if [ "$1" -ge 2 ] && [ -x /usr/bin/dms ]; then
+    # Find users running quickshell with DMS
+    for username in $(ps aux | grep -E '[q]uickshell.*dms' | awk '{print $1}' | sort -u); do
+        if [ "$username" = "root" ]; then
+            continue
+        fi
+        
+        # Get user's UID for DBus path
+        user_uid=$(id -u "$username" 2>/dev/null)
+        if [ -n "$user_uid" ] && [ -d "/run/user/$user_uid" ]; then
+            echo "Restarting DMS for user: $username"
+            # Run as user with proper DBus session
+            runuser -u "$username" -- /bin/sh -c "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/$user_uid/bus /usr/bin/dms restart >/dev/null 2>&1 || true" 2>/dev/null || true
+        fi
+    done
+fi
 
 %files
 %license LICENSE
 %doc README.md CONTRIBUTING.md
-%{_sysconfdir}/xdg/quickshell/dms/
+%{_datadir}/quickshell/dms/
 
 %files -n dms-cli
 %{_bindir}/dms
