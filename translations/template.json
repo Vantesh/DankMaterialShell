@@ -322,6 +322,27 @@
     "comment": ""
   },
   {
+    "term": "Authorize",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Authorize pairing with ",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Authorize service for ",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Auto Location",
     "translation": "",
     "context": "",
@@ -812,13 +833,6 @@
     "comment": ""
   },
   {
-    "term": "Compositor:",
-    "translation": "",
-    "context": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
     "term": "Configuration activated",
     "translation": "",
     "context": "",
@@ -834,6 +848,20 @@
   },
   {
     "term": "Configure which displays show shell components",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Confirm",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Confirm passkey for ",
     "translation": "",
     "context": "",
     "reference": "",
@@ -1071,13 +1099,6 @@
     "comment": ""
   },
   {
-    "term": "Dank Suite:",
-    "translation": "",
-    "context": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
     "term": "DankBar Font Scale",
     "translation": "",
     "context": "",
@@ -1135,6 +1156,13 @@
   },
   {
     "term": "Device",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Device paired",
     "translation": "",
     "context": "",
     "reference": "",
@@ -1267,6 +1295,13 @@
     "comment": ""
   },
   {
+    "term": "Donate on Ko-fi",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Drag widgets to reorder within sections. Use the eye icon to hide/show widgets (maintains spacing), or X to remove them completely.",
     "translation": "",
     "context": "",
@@ -1358,6 +1393,27 @@
     "comment": ""
   },
   {
+    "term": "Enter 6-digit passkey",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Enter PIN",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Enter PIN for ",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Enter credentials for ",
     "translation": "",
     "context": "",
@@ -1380,6 +1436,13 @@
   },
   {
     "term": "Enter filename...",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Enter passkey for ",
     "translation": "",
     "context": "",
     "reference": "",
@@ -1436,6 +1499,13 @@
   },
   {
     "term": "Failed to enable WiFi",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Failed to remove device",
     "translation": "",
     "context": "",
     "reference": "",
@@ -1569,13 +1639,6 @@
   },
   {
     "term": "Format Legend",
-    "translation": "",
-    "context": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Framework:",
     "translation": "",
     "context": "",
     "reference": "",
@@ -1813,6 +1876,13 @@
     "comment": ""
   },
   {
+    "term": "Indicator Style",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Individual Batteries",
     "translation": "",
     "context": "",
@@ -1863,13 +1933,6 @@
   },
   {
     "term": "Kill Process",
-    "translation": "",
-    "context": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Language:",
     "translation": "",
     "context": "",
     "reference": "",
@@ -2555,6 +2618,34 @@
     "comment": ""
   },
   {
+    "term": "Pair",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Pair Bluetooth Device",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Pairing failed",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Passkey:",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Password",
     "translation": "",
     "context": "",
@@ -2688,6 +2779,13 @@
     "comment": ""
   },
   {
+    "term": "Plugins:",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Popup Position",
     "translation": "",
     "context": "",
@@ -2793,13 +2891,6 @@
     "comment": ""
   },
   {
-    "term": "QML, JavaScript, Go",
-    "translation": "",
-    "context": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
     "term": "Quick access to application launcher",
     "translation": "",
     "context": "",
@@ -2885,6 +2976,13 @@
   },
   {
     "term": "Reset",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Resources",
     "translation": "",
     "context": "",
     "reference": "",
@@ -3171,6 +3269,13 @@
     "comment": ""
   },
   {
+    "term": "Show on Last Display",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Show on Overview",
     "translation": "",
     "context": "",
@@ -3339,6 +3444,13 @@
     "comment": ""
   },
   {
+    "term": "Support Development",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
     "term": "Surface",
     "translation": "",
     "context": "",
@@ -3487,13 +3599,6 @@
   },
   {
     "term": "Tab/Shift+Tab: Nav • ←→↑↓: Grid Nav • Enter/Space: Select",
-    "translation": "",
-    "context": "",
-    "reference": "",
-    "comment": ""
-  },
-  {
-    "term": "Technical Details",
     "translation": "",
     "context": "",
     "reference": "",
@@ -3928,6 +4033,13 @@
   },
   {
     "term": "Weather Widget",
+    "translation": "",
+    "context": "",
+    "reference": "",
+    "comment": ""
+  },
+  {
+    "term": "Website:",
     "translation": "",
     "context": "",
     "reference": "",

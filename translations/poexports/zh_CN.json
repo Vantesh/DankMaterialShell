@@ -137,6 +137,15 @@
   "Audio Output Devices (": {
     "Audio Output Devices (": "音频输出设备 ("
   },
+  "Authorize": {
+    "Authorize": "授权"
+  },
+  "Authorize pairing with ": {
+    "Authorize pairing with ": "授权配对 "
+  },
+  "Authorize service for ": {
+    "Authorize service for ": "授权服务 "
+  },
   "Auto Location": {
     "Auto Location": "自动定位"
   },
@@ -362,6 +371,12 @@
   "Configure which displays show shell components": {
     "Configure which displays show shell components": "配置哪些显示器显示各类组件"
   },
+  "Confirm": {
+    "Confirm": "确认"
+  },
+  "Confirm passkey for ": {
+    "Confirm passkey for ": "确认密钥 "
+  },
   "Connect": {
     "Connect": "连接"
   },
@@ -491,6 +506,9 @@
   "Device": {
     "Device": "设备"
   },
+  "Device paired": {
+    "Device paired": "设备已配对"
+  },
   "Disconnect": {
     "Disconnect": "断开连接"
   },
@@ -545,6 +563,9 @@
   "Domain (optional)": {
     "Domain (optional)": "域（可选）"
   },
+  "Donate on Ko-fi": {
+    "Donate on Ko-fi": "在Ko-fi上赞助"
+  },
   "Drag widgets to reorder within sections. Use the eye icon to hide/show widgets (maintains spacing), or X to remove them completely.": {
     "Drag widgets to reorder within sections. Use the eye icon to hide/show widgets (maintains spacing), or X to remove them completely.": "拖动组件以在各区块内重新排序。点击眼睛图标可隐藏/显示组件（保留间距），点击 X 可彻底移除。"
   },
@@ -584,6 +605,15 @@
   "End": {
     "End": "结束"
   },
+  "Enter 6-digit passkey": {
+    "Enter 6-digit passkey": "输入六位数密钥"
+  },
+  "Enter PIN": {
+    "Enter PIN": "输入PIN"
+  },
+  "Enter PIN for ": {
+    "Enter PIN for ": "输入PIN "
+  },
   "Enter credentials for ": {
     "Enter credentials for ": "输入凭据 "
   },
@@ -595,6 +625,9 @@
   },
   "Enter filename...": {
     "Enter filename...": "输入文件名..."
+  },
+  "Enter passkey for ": {
+    "Enter passkey for ": "输入密钥 "
   },
   "Enter password for ": {
     "Enter password for ": "输入密码"
@@ -619,6 +652,9 @@
   },
   "Failed to enable WiFi": {
     "Failed to enable WiFi": "无法启用 Wi-Fi"
+  },
+  "Failed to remove device": {
+    "Failed to remove device": "删除设备失败"
   },
   "Failed to set profile image": {
     "Failed to set profile image": "无法设置个人资料图片"
@@ -781,6 +817,9 @@
   },
   "Incorrect password": {
     "Incorrect password": "密码错误"
+  },
+  "Indicator Style": {
+    "Indicator Style": "指示样式"
   },
   "Individual Batteries": {
     "Individual Batteries": "分别显示电池"
@@ -1100,6 +1139,18 @@
   "Padding": {
     "Padding": "内边距"
   },
+  "Pair": {
+    "Pair": "配对"
+  },
+  "Pair Bluetooth Device": {
+    "Pair Bluetooth Device": "配对蓝牙设备"
+  },
+  "Pairing failed": {
+    "Pairing failed": "配对失败"
+  },
+  "Passkey:": {
+    "Passkey:": "密钥："
+  },
   "Password": {
     "Password": "密码"
   },
@@ -1156,6 +1207,9 @@
   },
   "Plugins": {
     "Plugins": "插件"
+  },
+  "Plugins:": {
+    "Plugins:": "插件："
   },
   "Popup Position": {
     "Popup Position": "弹出位置"
@@ -1233,7 +1287,7 @@
     "Refresh": "刷新"
   },
   "Reload Plugin": {
-    "Reload Plugin": ""
+    "Reload Plugin": "重载插件"
   },
   "Remove": {
     "Remove": "移除"
@@ -1243,6 +1297,9 @@
   },
   "Reset": {
     "Reset": "重置"
+  },
+  "Resources": {
+    "Resources": "资源"
   },
   "Right": {
     "Right": "右侧"
@@ -1364,6 +1421,9 @@
   "Show Workspace Apps": {
     "Show Workspace Apps": "显示工作区内应用"
   },
+  "Show on Last Display": {
+    "Show on Last Display": "上一个显示器"
+  },
   "Show on Overview": {
     "Show on Overview": "概览中显示"
   },
@@ -1435,6 +1495,9 @@
   },
   "Storage & Disks": {
     "Storage & Disks": "存储与磁盘"
+  },
+  "Support Development": {
+    "Support Development": "支持开发"
   },
   "Surface": {
     "Surface": "表面色"
@@ -1575,7 +1638,7 @@
     "Turn off monitors after": "在此时间后关闭显示器"
   },
   "Uninstall Plugin": {
-    "Uninstall Plugin": ""
+    "Uninstall Plugin": "卸载插件"
   },
   "Unpin from Dock": {
     "Unpin from Dock": "从程序坞取消固定"
@@ -1596,7 +1659,7 @@
     "Update All": "更新所有"
   },
   "Update Plugin": {
-    "Update Plugin": ""
+    "Update Plugin": "更新插件"
   },
   "Use 24-hour time format instead of 12-hour AM/PM": {
     "Use 24-hour time format instead of 12-hour AM/PM": "改用24小时制显示时间"
@@ -1693,6 +1756,9 @@
   },
   "Weather Widget": {
     "Weather Widget": "天气小组件"
+  },
+  "Website:": {
+    "Website:": "网站："
   },
   "When enabled, apps are sorted alphabetically. When disabled, apps are sorted by usage frequency.": {
     "When enabled, apps are sorted alphabetically. When disabled, apps are sorted by usage frequency.": "启用后，应用按字母顺序排序；禁用则按使用频率排序"

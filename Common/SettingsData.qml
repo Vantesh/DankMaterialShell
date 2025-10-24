@@ -189,6 +189,7 @@ Singleton {
     property bool lockBeforeSuspend: false
     property bool loginctlLockIntegration: true
     property string launchPrefix: ""
+    property var brightnessDevicePins: ({})
 
     property bool gtkThemingEnabled: false
     property bool qtThemingEnabled: false
@@ -202,6 +203,7 @@ Singleton {
     property real dockSpacing: 4
     property real dockBottomGap: 0
     property real dockIconSize: 40
+    property string dockIndicatorStyle: "circle"
 
     property bool notificationOverlayEnabled: false
     property bool dankBarAutoHide: false
@@ -257,6 +259,7 @@ Singleton {
     property string updaterTerminalAdditionalParams: ""
 
     property var screenPreferences: ({})
+    property var showOnLastDisplay: ({})
 
     signal forceDankBarLayoutRefresh
     signal forceDockLayoutRefresh
@@ -318,7 +321,7 @@ Singleton {
                     } else if (settings.themeIndex >= 0 && settings.themeIndex < themeNames.length) {
                         currentThemeName = themeNames[settings.themeIndex]
                     }
-                    console.log("Auto-migrated theme from index", settings.themeIndex, "to", currentThemeName)
+                    console.info("Auto-migrated theme from index", settings.themeIndex, "to", currentThemeName)
                 } else {
                     currentThemeName = settings.currentThemeName !== undefined ? settings.currentThemeName : "blue"
                 }
@@ -450,6 +453,7 @@ Singleton {
                 dockSpacing = settings.dockSpacing !== undefined ? settings.dockSpacing : 4
                 dockBottomGap = settings.dockBottomGap !== undefined ? settings.dockBottomGap : 0
                 dockIconSize = settings.dockIconSize !== undefined ? settings.dockIconSize : 40
+                dockIndicatorStyle = settings.dockIndicatorStyle !== undefined ? settings.dockIndicatorStyle : "circle"
                 cornerRadius = settings.cornerRadius !== undefined ? settings.cornerRadius : 12
                 notificationOverlayEnabled = settings.notificationOverlayEnabled !== undefined ? settings.notificationOverlayEnabled : false
                 dankBarAutoHide = settings.dankBarAutoHide !== undefined ? settings.dankBarAutoHide : (settings.topBarAutoHide !== undefined ? settings.topBarAutoHide : false)
@@ -491,6 +495,7 @@ Singleton {
                 widgetBackgroundColor = settings.widgetBackgroundColor !== undefined ? settings.widgetBackgroundColor : "sch"
                 surfaceBase = settings.surfaceBase !== undefined ? settings.surfaceBase : "s"
                 screenPreferences = settings.screenPreferences !== undefined ? settings.screenPreferences : ({})
+                showOnLastDisplay = settings.showOnLastDisplay !== undefined ? settings.showOnLastDisplay : ({})
                 wallpaperFillMode = settings.wallpaperFillMode !== undefined ? settings.wallpaperFillMode : "Fill"
                 animationSpeed = settings.animationSpeed !== undefined ? settings.animationSpeed : SettingsData.AnimationSpeed.Short
                 customAnimationDuration = settings.customAnimationDuration !== undefined ? settings.customAnimationDuration : 500
@@ -505,6 +510,7 @@ Singleton {
                 lockBeforeSuspend = settings.lockBeforeSuspend !== undefined ? settings.lockBeforeSuspend : false
                 loginctlLockIntegration = settings.loginctlLockIntegration !== undefined ? settings.loginctlLockIntegration : true
                 launchPrefix = settings.launchPrefix !== undefined ? settings.launchPrefix : ""
+                brightnessDevicePins = settings.brightnessDevicePins !== undefined ? settings.brightnessDevicePins : ({})
 
                 if (settings.configVersion === undefined) {
                     migrateFromUndefinedToV1(settings)
@@ -631,6 +637,7 @@ Singleton {
                                                 "dockSpacing": dockSpacing,
                                                 "dockBottomGap": dockBottomGap,
                                                 "dockIconSize": dockIconSize,
+                                                "dockIndicatorStyle": dockIndicatorStyle,
                                                 "cornerRadius": cornerRadius,
                                                 "notificationOverlayEnabled": notificationOverlayEnabled,
                                                 "dankBarAutoHide": dankBarAutoHide,
@@ -672,6 +679,7 @@ Singleton {
                                                 "updaterCustomCommand": updaterCustomCommand,
                                                 "updaterTerminalAdditionalParams": updaterTerminalAdditionalParams,
                                                 "screenPreferences": screenPreferences,
+                                                "showOnLastDisplay": showOnLastDisplay,
                                                 "animationSpeed": animationSpeed,
                                                 "customAnimationDuration": customAnimationDuration,
                                                 "acMonitorTimeout": acMonitorTimeout,
@@ -685,6 +693,7 @@ Singleton {
                                                 "lockBeforeSuspend": lockBeforeSuspend,
                                                 "loginctlLockIntegration": loginctlLockIntegration,
                                                 "launchPrefix": launchPrefix,
+                                                "brightnessDevicePins": brightnessDevicePins,
                                                 "configVersion": settingsConfigVersion
                                             }, null, 2))
     }
@@ -696,7 +705,7 @@ Singleton {
     }
 
     function migrateFromUndefinedToV1(settings) {
-        console.log("SettingsData: Migrating configuration from undefined to version 1")
+        console.info("SettingsData: Migrating configuration from undefined to version 1")
     }
 
     function cleanupUnusedKeys() {
@@ -724,7 +733,7 @@ Singleton {
             "notepadTransparencyOverride", "notepadLastCustomTransparency", "soundsEnabled",
             "useSystemSoundTheme", "soundNewNotification", "soundVolumeChanged", "soundPluggedIn", "gtkThemingEnabled",
             "qtThemingEnabled", "syncModeWithPortal", "showDock", "dockAutoHide", "dockGroupByApp",
-            "dockOpenOnOverview", "dockPosition", "dockSpacing", "dockBottomGap", "dockIconSize",
+            "dockOpenOnOverview", "dockPosition", "dockSpacing", "dockBottomGap", "dockIconSize", "dockIndicatorStyle",
             "cornerRadius", "notificationOverlayEnabled", "dankBarAutoHide",
             "dankBarOpenOnOverview", "dankBarVisible", "dankBarSpacing", "dankBarBottomGap",
             "dankBarInnerPadding", "dankBarSquareCorners", "dankBarNoBackground",
@@ -737,10 +746,10 @@ Singleton {
             "customPowerActionLock", "customPowerActionLogout", "customPowerActionSuspend",
             "customPowerActionHibernate", "customPowerActionReboot", "customPowerActionPowerOff",
             "updaterUseCustomCommand", "updaterCustomCommand", "updaterTerminalAdditionalParams",
-            "screenPreferences", "animationSpeed", "customAnimationDuration", "acMonitorTimeout", "acLockTimeout",
+            "screenPreferences", "showOnLastDisplay", "animationSpeed", "customAnimationDuration", "acMonitorTimeout", "acLockTimeout",
             "acSuspendTimeout", "acHibernateTimeout", "batteryMonitorTimeout", "batteryLockTimeout",
             "batterySuspendTimeout", "batteryHibernateTimeout", "lockBeforeSuspend",
-            "loginctlLockIntegration", "launchPrefix", "configVersion"
+            "loginctlLockIntegration", "launchPrefix", "brightnessDevicePins", "configVersion"
         ]
 
         try {
@@ -937,7 +946,11 @@ Singleton {
         if (prefs.includes("all")) {
             return Quickshell.screens
         }
-        return Quickshell.screens.filter(screen => prefs.includes(screen.name))
+        var filtered = Quickshell.screens.filter(screen => prefs.includes(screen.name))
+        if (filtered.length === 0 && showOnLastDisplay && showOnLastDisplay[componentId] && Quickshell.screens.length === 1) {
+            return Quickshell.screens
+        }
+        return filtered
     }
 
     function sendTestNotifications() {
@@ -1037,6 +1050,7 @@ Singleton {
     function setCornerRadius(radius) {
         cornerRadius = radius
         saveSettings()
+        NiriService.generateNiriLayoutConfig()
     }
 
     function setClockFormat(use24Hour) {
@@ -1607,6 +1621,11 @@ Singleton {
         saveSettings()
     }
 
+    function setDockIndicatorStyle(style) {
+        dockIndicatorStyle = style
+        saveSettings()
+    }
+
     function setNotificationOverlayEnabled(enabled) {
         notificationOverlayEnabled = enabled
         saveSettings()
@@ -1798,6 +1817,16 @@ Singleton {
 
     function setScreenPreferences(prefs) {
         screenPreferences = prefs
+        saveSettings()
+    }
+
+    function setShowOnLastDisplay(prefs) {
+        showOnLastDisplay = prefs
+        saveSettings()
+    }
+
+    function setBrightnessDevicePins(pins) {
+        brightnessDevicePins = pins
         saveSettings()
     }
 
@@ -1995,7 +2024,7 @@ Singleton {
         running: false
         onExited: exitCode => {
             if (exitCode === 0) {
-                console.log("Copied default-settings.json to settings.json")
+                console.info("Copied default-settings.json to settings.json")
                 settingsFile.reload()
             } else {
                 applyStoredTheme()

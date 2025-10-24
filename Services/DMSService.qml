@@ -22,7 +22,6 @@ Singleton {
     property bool subscribeConnected: false
 
     readonly property string socketPath: Quickshell.env("DMS_SOCKET")
-    readonly property bool verboseLogs: Quickshell.env("DMS_VERBOSE_LOGS") === "1"
 
     property var pendingRequests: ({})
     property int requestIdCounter: 0
@@ -42,6 +41,7 @@ Singleton {
     signal loginctlEvent(var event)
     signal capabilitiesReceived()
     signal credentialsRequest(var data)
+    signal bluetoothPairingRequest(var data)
 
     Component.onCompleted: {
         if (socketPath && socketPath.length > 0) {
@@ -169,9 +169,7 @@ Singleton {
                     return
                 }
 
-                if (root.verboseLogs) {
-                    console.log("DMSService: Request socket <<", line)
-                }
+                console.log("DMSService: Request socket <<", line)
 
                 try {
                     const response = JSON.parse(line)
@@ -201,9 +199,7 @@ Singleton {
                     return
                 }
 
-                if (root.verboseLogs) {
-                    console.log("DMSService: Subscribe socket <<", line)
-                }
+                console.log("DMSService: Subscribe socket <<", line)
 
                 try {
                     const response = JSON.parse(line)
@@ -220,9 +216,7 @@ Singleton {
             "method": "subscribe"
         }
 
-        if (verboseLogs) {
-            console.log("DMSService: Subscribing to all services")
-        }
+        console.log("DMSService: Subscribing to all services")
         subscribeSocket.send(request)
     }
 
@@ -253,7 +247,7 @@ Singleton {
             apiVersion = data.apiVersion || 0
             capabilities = data.capabilities || []
 
-            console.log("DMSService: Connected (API v" + apiVersion + ") -", JSON.stringify(capabilities))
+            console.info("DMSService: Connected (API v" + apiVersion + ") -", JSON.stringify(capabilities))
 
             if (apiVersion < expectedApiVersion) {
                 ToastService.showError("DMS server is outdated (API v" + apiVersion + ", expected v" + expectedApiVersion + ")")
@@ -270,6 +264,8 @@ Singleton {
             } else {
                 loginctlStateUpdate(data)
             }
+        } else if (service === "bluetooth.pairing") {
+            bluetoothPairingRequest(data)
         }
     }
 
@@ -407,5 +403,49 @@ Singleton {
 
     function unlockSession(callback) {
         sendRequest("loginctl.unlock", null, callback)
+    }
+
+    function bluetoothPair(devicePath, callback) {
+        sendRequest("bluetooth.pair", {
+                        "device": devicePath
+                    }, callback)
+    }
+
+    function bluetoothConnect(devicePath, callback) {
+        sendRequest("bluetooth.connect", {
+                        "device": devicePath
+                    }, callback)
+    }
+
+    function bluetoothDisconnect(devicePath, callback) {
+        sendRequest("bluetooth.disconnect", {
+                        "device": devicePath
+                    }, callback)
+    }
+
+    function bluetoothRemove(devicePath, callback) {
+        sendRequest("bluetooth.remove", {
+                        "device": devicePath
+                    }, callback)
+    }
+
+    function bluetoothTrust(devicePath, callback) {
+        sendRequest("bluetooth.trust", {
+                        "device": devicePath
+                    }, callback)
+    }
+
+    function bluetoothSubmitPairing(token, secrets, accept, callback) {
+        sendRequest("bluetooth.pairing.submit", {
+                        "token": token,
+                        "secrets": secrets,
+                        "accept": accept
+                    }, callback)
+    }
+
+    function bluetoothCancelPairing(token, callback) {
+        sendRequest("bluetooth.pairing.cancel", {
+                        "token": token
+                    }, callback)
     }
 }

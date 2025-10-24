@@ -18,7 +18,7 @@ Item {
     property var hyprlandOverviewLoader: null
     property var parentScreen: null
     readonly property var sortedToplevels: {
-        return CompositorService.filterCurrentWorkspace(CompositorService.sortedToplevels, parentScreen?.name);
+        return CompositorService.filterCurrentWorkspace(CompositorService.sortedToplevels, screenName);
     }
     property int currentWorkspace: {
         if (CompositorService.isNiri) {
@@ -224,12 +224,28 @@ Item {
 
             const currentIndex = realWorkspaces.findIndex(ws => ws === root.currentWorkspace)
             const validIndex = currentIndex === -1 ? 0 : currentIndex
-            const nextIndex = direction > 0 ? (validIndex + 1) % realWorkspaces.length : (validIndex - 1 + realWorkspaces.length) % realWorkspaces.length
+            const nextIndex = direction > 0 ? Math.min(validIndex + 1, realWorkspaces.length - 1) : Math.max(validIndex - 1, 0)
+
+            if (nextIndex === validIndex) {
+                return
+            }
 
             NiriService.switchToWorkspace(realWorkspaces[nextIndex] - 1)
         } else if (CompositorService.isHyprland) {
-            const command = direction > 0 ? "workspace r+1" : "workspace r-1"
-            Hyprland.dispatch(command)
+            const realWorkspaces = getRealWorkspaces()
+            if (realWorkspaces.length < 2) {
+                return
+            }
+
+            const currentIndex = realWorkspaces.findIndex(ws => ws.id === root.currentWorkspace)
+            const validIndex = currentIndex === -1 ? 0 : currentIndex
+            const nextIndex = direction > 0 ? Math.min(validIndex + 1, realWorkspaces.length - 1) : Math.max(validIndex - 1, 0)
+
+            if (nextIndex === validIndex) {
+                return
+            }
+
+            Hyprland.dispatch(`workspace ${realWorkspaces[nextIndex].id}`)
         }
     }
 
@@ -421,6 +437,26 @@ Item {
                         return isActive ? root.widgetHeight * 1.05 : root.widgetHeight * 0.7
                     } else {
                         return SettingsData.showWorkspaceApps ? widgetHeight * 0.7 : widgetHeight * 0.5
+                    }
+                }
+		
+		//DO NOT move this MouseArea. It should be on this level in order for the appMouseArea to work
+		MouseArea {
+                    id: mouseArea
+                    anchors.fill: parent
+                    hoverEnabled: !isPlaceholder
+                    cursorShape: isPlaceholder ? Qt.ArrowCursor : Qt.PointingHandCursor
+                    enabled: !isPlaceholder
+                    onClicked: {
+                        if (isPlaceholder) {
+                            return
+                        }
+
+                        if (CompositorService.isNiri) {
+                            NiriService.switchToWorkspace(modelData - 1)
+                        } else if (CompositorService.isHyprland && modelData?.id) {
+                            Hyprland.dispatch(`workspace ${modelData.id}`)
+                        }
                     }
                 }
 
@@ -715,25 +751,6 @@ Item {
                 }
                 }
 
-                MouseArea {
-                    id: mouseArea
-                    anchors.fill: parent
-                    hoverEnabled: !isPlaceholder
-                    cursorShape: isPlaceholder ? Qt.ArrowCursor : Qt.PointingHandCursor
-                    enabled: !isPlaceholder
-                    onClicked: {
-                        if (isPlaceholder) {
-                            return
-                        }
-
-                        if (CompositorService.isNiri) {
-                            NiriService.switchToWorkspace(modelData - 1)
-                        } else if (CompositorService.isHyprland && modelData?.id) {
-                            Hyprland.dispatch(`workspace ${modelData.id}`)
-                        }
-                    }
-                }
-
                 Component.onCompleted: updateAllData()
 
                 Connections {
@@ -745,6 +762,7 @@ Item {
                     enabled: CompositorService.isNiri
                     function onAllWorkspacesChanged() { delegateRoot.updateAllData() }
                     function onWindowUrgentChanged() { delegateRoot.updateAllData() }
+		    function onWindowsChanged() { delegateRoot.updateAllData() }
                 }
                 Connections {
                     target: SettingsData

@@ -14,13 +14,13 @@
   {
     "term": "- Stateless System Monitoring",
     "context": "- Stateless System Monitoring",
-    "reference": "Modules/Settings/AboutTab.qml:475",
+    "reference": "Modules/Settings/AboutTab.qml:432",
     "comment": ""
   },
   {
     "term": "- Support Us With a Star ⭐",
     "context": "- Support Us With a Star ⭐",
-    "reference": "Modules/Settings/AboutTab.qml:440",
+    "reference": "Modules/Settings/AboutTab.qml:397",
     "comment": ""
   },
   {
@@ -44,7 +44,7 @@
   {
     "term": "3rd party",
     "context": "3rd party",
-    "reference": "Modules/Settings/PluginsTab.qml:1076",
+    "reference": "Modules/Settings/PluginsTab.qml:1074",
     "comment": ""
   },
   {
@@ -128,7 +128,7 @@
   {
     "term": "All displays",
     "context": "All displays",
-    "reference": "Modules/Settings/DisplaysTab.qml:670",
+    "reference": "Modules/Settings/DisplaysTab.qml:680",
     "comment": ""
   },
   {
@@ -200,7 +200,7 @@
   {
     "term": "Apply warm color temperature to reduce eye strain. Use automation settings below to control when it activates.",
     "context": "Apply warm color temperature to reduce eye strain. Use automation settings below to control when it activates.",
-    "reference": "Modules/Settings/DisplaysTab.qml:119",
+    "reference": "Modules/Settings/DisplaysTab.qml:130",
     "comment": ""
   },
   {
@@ -248,7 +248,7 @@
   {
     "term": "Audio Codec",
     "context": "Audio Codec",
-    "reference": "Modules/ControlCenter/Details/BluetoothDetail.qml:476",
+    "reference": "Modules/ControlCenter/Details/BluetoothDetail.qml:501",
     "comment": ""
   },
   {
@@ -273,6 +273,24 @@
     "term": "Audio Output Devices (",
     "context": "Audio Output Devices (",
     "reference": "Modules/DankDash/MediaPlayerTab.qml:409",
+    "comment": ""
+  },
+  {
+    "term": "Authorize",
+    "context": "Authorize",
+    "reference": "Modals/BluetoothPairingModal.qml:292",
+    "comment": ""
+  },
+  {
+    "term": "Authorize pairing with ",
+    "context": "Authorize pairing with ",
+    "reference": "Modals/BluetoothPairingModal.qml:114",
+    "comment": ""
+  },
+  {
+    "term": "Authorize service for ",
+    "context": "Authorize service for ",
+    "reference": "Modals/BluetoothPairingModal.qml:116",
     "comment": ""
   },
   {
@@ -308,7 +326,7 @@
   {
     "term": "Automatic Control",
     "context": "Automatic Control",
-    "reference": "Modules/Settings/DisplaysTab.qml:164",
+    "reference": "Modules/Settings/DisplaysTab.qml:175",
     "comment": ""
   },
   {
@@ -332,7 +350,7 @@
   {
     "term": "Automatically detect location based on IP address",
     "context": "Automatically detect location based on IP address",
-    "reference": "Modules/Settings/DisplaysTab.qml:369",
+    "reference": "Modules/Settings/DisplaysTab.qml:380",
     "comment": ""
   },
   {
@@ -380,7 +398,7 @@
   {
     "term": "Available Screens (",
     "context": "Available Screens (",
-    "reference": "Modules/Settings/DisplaysTab.qml:513",
+    "reference": "Modules/Settings/DisplaysTab.qml:524",
     "comment": ""
   },
   {
@@ -428,7 +446,7 @@
   {
     "term": "Bluetooth Settings",
     "context": "Bluetooth Settings",
-    "reference": "Modules/ControlCenter/Details/BluetoothDetail.qml:42",
+    "reference": "Modules/ControlCenter/Details/BluetoothDetail.qml:69",
     "comment": ""
   },
   {
@@ -488,7 +506,7 @@
   {
     "term": "Browse Plugins",
     "context": "Browse Plugins",
-    "reference": "Modules/Settings/PluginsTab.qml:869",
+    "reference": "Modules/Settings/PluginsTab.qml:867",
     "comment": ""
   },
   {
@@ -524,13 +542,13 @@
   {
     "term": "Cancel",
     "context": "Cancel",
-    "reference": "Modals/DankColorPickerModal.qml:510, Modals/WifiPasswordModal.qml:468, Modules/Settings/PluginsTab.qml:1298, Modals/FileBrowser/FileBrowserModal.qml:952",
+    "reference": "Modals/BluetoothPairingModal.qml:249, Modals/DankColorPickerModal.qml:510, Modals/WifiPasswordModal.qml:468, Modules/Settings/PluginsTab.qml:1296, Modals/FileBrowser/FileBrowserModal.qml:952",
     "comment": ""
   },
   {
     "term": "Capacity",
     "context": "Capacity",
-    "reference": "Modules/ControlCenter/Details/BatteryDetail.qml:171, Modules/DankBar/Popouts/BatteryPopout.qml:349, Modules/DankBar/Popouts/BatteryPopout.qml:505",
+    "reference": "Modules/ControlCenter/Details/BatteryDetail.qml:171, Modules/DankBar/Popouts/BatteryPopout.qml:350, Modules/DankBar/Popouts/BatteryPopout.qml:506",
     "comment": ""
   },
   {
@@ -620,7 +638,7 @@
   {
     "term": "Close",
     "context": "Close",
-    "reference": "Modals/NetworkInfoModal.qml:129, Modals/NetworkWiredInfoModal.qml:129, Modules/SystemUpdatePopout.qml:333, Modules/DankBar/Widgets/RunningApps.qml:745",
+    "reference": "Modals/NetworkInfoModal.qml:129, Modals/NetworkWiredInfoModal.qml:129, Modules/SystemUpdatePopout.qml:333, Modules/DankBar/Widgets/RunningApps.qml:774",
     "comment": ""
   },
   {
@@ -638,7 +656,7 @@
   {
     "term": "Color temperature for night mode",
     "context": "Color temperature for night mode",
-    "reference": "Modules/Settings/DisplaysTab.qml:145",
+    "reference": "Modules/Settings/DisplaysTab.qml:156",
     "comment": ""
   },
   {
@@ -696,15 +714,9 @@
     "comment": ""
   },
   {
-    "term": "Compositor:",
-    "context": "Compositor:",
-    "reference": "Modules/Settings/AboutTab.qml:361",
-    "comment": ""
-  },
-  {
     "term": "Configuration activated",
     "context": "Configuration activated",
-    "reference": "Services/NetworkManagerService.qml:320",
+    "reference": "Services/NetworkManagerService.qml:308",
     "comment": ""
   },
   {
@@ -716,7 +728,19 @@
   {
     "term": "Configure which displays show shell components",
     "context": "Configure which displays show shell components",
-    "reference": "Modules/Settings/DisplaysTab.qml:497",
+    "reference": "Modules/Settings/DisplaysTab.qml:508",
+    "comment": ""
+  },
+  {
+    "term": "Confirm",
+    "context": "Confirm",
+    "reference": "Modals/BluetoothPairingModal.qml:290",
+    "comment": ""
+  },
+  {
+    "term": "Confirm passkey for ",
+    "context": "Confirm passkey for ",
+    "reference": "Modals/BluetoothPairingModal.qml:112",
     "comment": ""
   },
   {
@@ -734,13 +758,13 @@
   {
     "term": "Connected Displays",
     "context": "Connected Displays",
-    "reference": "Modules/Settings/DisplaysTab.qml:490",
+    "reference": "Modules/Settings/DisplaysTab.qml:501",
     "comment": ""
   },
   {
     "term": "Connection failed. Check password and try again.",
     "context": "Connection failed. Check password and try again.",
-    "reference": "Services/NetworkManagerService.qml:287",
+    "reference": "Services/NetworkManagerService.qml:275",
     "comment": ""
   },
   {
@@ -872,7 +896,7 @@
   {
     "term": "DEMO MODE - Click anywhere to exit",
     "context": "DEMO MODE - Click anywhere to exit",
-    "reference": "Modules/Lock/LockScreenContent.qml:628",
+    "reference": "Modules/Lock/LockScreenContent.qml:654",
     "comment": ""
   },
   {
@@ -884,13 +908,13 @@
   {
     "term": "DMS out of date",
     "context": "DMS out of date",
-    "reference": "Services/DMSService.qml:235",
+    "reference": "Services/DMSService.qml:229",
     "comment": ""
   },
   {
     "term": "DMS_SOCKET not available",
     "context": "DMS_SOCKET not available",
-    "reference": "Modules/ControlCenter/Components/DragDropGrid.qml:197",
+    "reference": "Modules/ControlCenter/Components/DragDropGrid.qml:200",
     "comment": ""
   },
   {
@@ -915,12 +939,6 @@
     "term": "Dank Bar Widget Transparency",
     "context": "Dank Bar Widget Transparency",
     "reference": "Modules/Settings/ThemeColorsTab.qml:781",
-    "comment": ""
-  },
-  {
-    "term": "Dank Suite:",
-    "context": "Dank Suite:",
-    "reference": "Modules/Settings/AboutTab.qml:483",
     "comment": ""
   },
   {
@@ -978,6 +996,12 @@
     "comment": ""
   },
   {
+    "term": "Device paired",
+    "context": "Device paired",
+    "reference": "Modules/ControlCenter/Details/BluetoothDetail.qml:42",
+    "comment": ""
+  },
+  {
     "term": "Disconnect",
     "context": "Disconnect",
     "reference": "Modules/ControlCenter/BuiltinPlugins/VpnWidget.qml:90, Modules/DankBar/Popouts/VpnPopout.qml:213",
@@ -986,7 +1010,7 @@
   {
     "term": "Disconnected from WiFi",
     "context": "Disconnected from WiFi",
-    "reference": "Services/NetworkManagerService.qml:405",
+    "reference": "Services/NetworkManagerService.qml:385",
     "comment": ""
   },
   {
@@ -1076,13 +1100,19 @@
   {
     "term": "Dock Transparency",
     "context": "Dock Transparency",
-    "reference": "Modules/Settings/DockTab.qml:530",
+    "reference": "Modules/Settings/DockTab.qml:596",
     "comment": ""
   },
   {
     "term": "Domain (optional)",
     "context": "Domain (optional)",
     "reference": "Modals/WifiPasswordModal.qml:397",
+    "comment": ""
+  },
+  {
+    "term": "Donate on Ko-fi",
+    "context": "Donate on Ko-fi",
+    "reference": "Modules/Settings/AboutTab.qml:486",
     "comment": ""
   },
   {
@@ -1160,7 +1190,25 @@
   {
     "term": "End",
     "context": "End",
-    "reference": "Modules/Settings/DisplaysTab.qml:318",
+    "reference": "Modules/Settings/DisplaysTab.qml:329",
+    "comment": ""
+  },
+  {
+    "term": "Enter 6-digit passkey",
+    "context": "Enter 6-digit passkey",
+    "reference": "Modals/BluetoothPairingModal.qml:188",
+    "comment": ""
+  },
+  {
+    "term": "Enter PIN",
+    "context": "Enter PIN",
+    "reference": "Modals/BluetoothPairingModal.qml:153",
+    "comment": ""
+  },
+  {
+    "term": "Enter PIN for ",
+    "context": "Enter PIN for ",
+    "reference": "Modals/BluetoothPairingModal.qml:118",
     "comment": ""
   },
   {
@@ -1185,6 +1233,12 @@
     "term": "Enter filename...",
     "context": "Enter filename...",
     "reference": "Modals/FileBrowser/FileBrowserModal.qml:785",
+    "comment": ""
+  },
+  {
+    "term": "Enter passkey for ",
+    "context": "Enter passkey for ",
+    "reference": "Modals/BluetoothPairingModal.qml:120",
     "comment": ""
   },
   {
@@ -1214,25 +1268,31 @@
   {
     "term": "Failed to activate configuration",
     "context": "Failed to activate configuration",
-    "reference": "Services/NetworkManagerService.qml:316",
+    "reference": "Services/NetworkManagerService.qml:304",
     "comment": ""
   },
   {
     "term": "Failed to connect to ",
     "context": "Failed to connect to ",
-    "reference": "Services/NetworkManagerService.qml:289",
+    "reference": "Services/NetworkManagerService.qml:277",
     "comment": ""
   },
   {
     "term": "Failed to disconnect WiFi",
     "context": "Failed to disconnect WiFi",
-    "reference": "Services/NetworkManagerService.qml:403",
+    "reference": "Services/NetworkManagerService.qml:383",
     "comment": ""
   },
   {
     "term": "Failed to enable WiFi",
     "context": "Failed to enable WiFi",
-    "reference": "Services/NetworkManagerService.qml:508",
+    "reference": "Services/NetworkManagerService.qml:484",
+    "comment": ""
+  },
+  {
+    "term": "Failed to remove device",
+    "context": "Failed to remove device",
+    "reference": "Modules/ControlCenter/Details/BluetoothDetail.qml:548",
     "comment": ""
   },
   {
@@ -1250,7 +1310,7 @@
   {
     "term": "Failed to start connection to ",
     "context": "Failed to start connection to ",
-    "reference": "Services/NetworkManagerService.qml:389",
+    "reference": "Services/NetworkManagerService.qml:371",
     "comment": ""
   },
   {
@@ -1328,7 +1388,7 @@
   {
     "term": "Forget Device",
     "context": "Forget Device",
-    "reference": "Modules/ControlCenter/Details/BluetoothDetail.qml:501",
+    "reference": "Modules/ControlCenter/Details/BluetoothDetail.qml:526",
     "comment": ""
   },
   {
@@ -1340,19 +1400,13 @@
   {
     "term": "Forgot network ",
     "context": "Forgot network ",
-    "reference": "Services/NetworkManagerService.qml:465",
+    "reference": "Services/NetworkManagerService.qml:441",
     "comment": ""
   },
   {
     "term": "Format Legend",
     "context": "Format Legend",
     "reference": "Modules/Settings/TimeWeatherTab.qml:354",
-    "comment": ""
-  },
-  {
-    "term": "Framework:",
-    "context": "Framework:",
-    "reference": "Modules/Settings/AboutTab.qml:325",
     "comment": ""
   },
   {
@@ -1388,19 +1442,19 @@
   {
     "term": "Gamma Control",
     "context": "Gamma Control",
-    "reference": "Modules/Settings/DisplaysTab.qml:106",
+    "reference": "Modules/Settings/DisplaysTab.qml:117",
     "comment": ""
   },
   {
     "term": "Gamma control not available. Requires DMS API v6+.",
     "context": "Gamma control not available. Requires DMS API v6+.",
-    "reference": "Modules/Settings/DisplaysTab.qml:119",
+    "reference": "Modules/Settings/DisplaysTab.qml:130",
     "comment": ""
   },
   {
     "term": "Github:",
     "context": "Github:",
-    "reference": "Modules/Settings/AboutTab.qml:413",
+    "reference": "Modules/Settings/AboutTab.qml:370",
     "comment": ""
   },
   {
@@ -1436,13 +1490,13 @@
   {
     "term": "Health",
     "context": "Health",
-    "reference": "Modules/ControlCenter/Details/BatteryDetail.qml:136, Modules/DankBar/Popouts/BatteryPopout.qml:314, Modules/DankBar/Popouts/BatteryPopout.qml:468",
+    "reference": "Modules/ControlCenter/Details/BatteryDetail.qml:136, Modules/DankBar/Popouts/BatteryPopout.qml:315, Modules/DankBar/Popouts/BatteryPopout.qml:469",
     "comment": ""
   },
   {
     "term": "Height to Edge Gap (Exclusive Zone)",
     "context": "Height to Edge Gap (Exclusive Zone)",
-    "reference": "Modules/Settings/DockTab.qml:467",
+    "reference": "Modules/Settings/DockTab.qml:533",
     "comment": ""
   },
   {
@@ -1484,7 +1538,7 @@
   {
     "term": "Hour",
     "context": "Hour",
-    "reference": "Modules/Settings/DisplaysTab.qml:255",
+    "reference": "Modules/Settings/DisplaysTab.qml:266",
     "comment": ""
   },
   {
@@ -1502,13 +1556,13 @@
   {
     "term": "I Understand",
     "context": "I Understand",
-    "reference": "Modules/Settings/PluginsTab.qml:1304",
+    "reference": "Modules/Settings/PluginsTab.qml:1302",
     "comment": ""
   },
   {
     "term": "Icon Size",
     "context": "Icon Size",
-    "reference": "Modules/Settings/DockTab.qml:363",
+    "reference": "Modules/Settings/DockTab.qml:429",
     "comment": ""
   },
   {
@@ -1554,9 +1608,15 @@
     "comment": ""
   },
   {
+    "term": "Indicator Style",
+    "context": "Indicator Style",
+    "reference": "Modules/Settings/DockTab.qml:364",
+    "comment": ""
+  },
+  {
     "term": "Individual Batteries",
     "context": "Individual Batteries",
-    "reference": "Modules/DankBar/Popouts/BatteryPopout.qml:374",
+    "reference": "Modules/DankBar/Popouts/BatteryPopout.qml:375",
     "comment": ""
   },
   {
@@ -1568,7 +1628,7 @@
   {
     "term": "Install plugins from the DMS plugin registry",
     "context": "Install plugins from the DMS plugin registry",
-    "reference": "Modules/Settings/PluginsTab.qml:918",
+    "reference": "Modules/Settings/PluginsTab.qml:916",
     "comment": ""
   },
   {
@@ -1599,12 +1659,6 @@
     "term": "Kill Process",
     "context": "Kill Process",
     "reference": "Modules/ProcessList/ProcessContextMenu.qml:171",
-    "comment": ""
-  },
-  {
-    "term": "Language:",
-    "context": "Language:",
-    "reference": "Modules/Settings/AboutTab.qml:348",
     "comment": ""
   },
   {
@@ -1640,7 +1694,7 @@
   {
     "term": "Latitude",
     "context": "Latitude",
-    "reference": "Modules/Settings/DisplaysTab.qml:402, Modules/Settings/TimeWeatherTab.qml:665",
+    "reference": "Modules/Settings/DisplaysTab.qml:413, Modules/Settings/TimeWeatherTab.qml:665",
     "comment": ""
   },
   {
@@ -1676,7 +1730,7 @@
   {
     "term": "Left",
     "context": "Left",
-    "reference": "Modules/Settings/DankBarTab.qml:708, Modules/DankBar/Popouts/BatteryPopout.qml:537",
+    "reference": "Modules/Settings/DankBarTab.qml:708, Modules/DankBar/Popouts/BatteryPopout.qml:538",
     "comment": ""
   },
   {
@@ -1706,7 +1760,7 @@
   {
     "term": "Loading plugins...",
     "context": "Loading plugins...",
-    "reference": "Modules/Settings/PluginsTab.qml:976",
+    "reference": "Modules/Settings/PluginsTab.qml:974",
     "comment": ""
   },
   {
@@ -1748,7 +1802,7 @@
   {
     "term": "Longitude",
     "context": "Longitude",
-    "reference": "Modules/Settings/DisplaysTab.qml:425, Modules/Settings/TimeWeatherTab.qml:716",
+    "reference": "Modules/Settings/DisplaysTab.qml:436, Modules/Settings/TimeWeatherTab.qml:716",
     "comment": ""
   },
   {
@@ -1766,7 +1820,7 @@
   {
     "term": "Manual Coordinates",
     "context": "Manual Coordinates",
-    "reference": "Modules/Settings/DisplaysTab.qml:390",
+    "reference": "Modules/Settings/DisplaysTab.qml:401",
     "comment": ""
   },
   {
@@ -1856,7 +1910,7 @@
   {
     "term": "Minute",
     "context": "Minute",
-    "reference": "Modules/Settings/DisplaysTab.qml:263",
+    "reference": "Modules/Settings/DisplaysTab.qml:274",
     "comment": ""
   },
   {
@@ -1898,7 +1952,7 @@
   {
     "term": "NM not supported",
     "context": "NM not supported",
-    "reference": "Modules/ControlCenter/Components/DragDropGrid.qml:199",
+    "reference": "Modules/ControlCenter/Components/DragDropGrid.qml:202",
     "comment": ""
   },
   {
@@ -1976,7 +2030,7 @@
   {
     "term": "Night Mode",
     "context": "Night Mode",
-    "reference": "Modules/Settings/DisplaysTab.qml:118",
+    "reference": "Modules/Settings/DisplaysTab.qml:129",
     "comment": ""
   },
   {
@@ -1994,7 +2048,7 @@
   {
     "term": "No Bluetooth adapter found",
     "context": "No Bluetooth adapter found",
-    "reference": "Modules/ControlCenter/Details/BluetoothDetail.qml:425",
+    "reference": "Modules/ControlCenter/Details/BluetoothDetail.qml:450",
     "comment": ""
   },
   {
@@ -2036,13 +2090,13 @@
   {
     "term": "No plugins found",
     "context": "No plugins found",
-    "reference": "Modules/Settings/PluginsTab.qml:1200",
+    "reference": "Modules/Settings/PluginsTab.qml:1198",
     "comment": ""
   },
   {
     "term": "No plugins found.",
     "context": "No plugins found.",
-    "reference": "Modules/Settings/PluginsTab.qml:623",
+    "reference": "Modules/Settings/PluginsTab.qml:621",
     "comment": ""
   },
   {
@@ -2144,7 +2198,7 @@
   {
     "term": "Only adjust gamma based on time or location rules.",
     "context": "Only adjust gamma based on time or location rules.",
-    "reference": "Modules/Settings/DisplaysTab.qml:165",
+    "reference": "Modules/Settings/DisplaysTab.qml:176",
     "comment": ""
   },
   {
@@ -2186,7 +2240,31 @@
   {
     "term": "Padding",
     "context": "Padding",
-    "reference": "Modules/Settings/DockTab.qml:439",
+    "reference": "Modules/Settings/DockTab.qml:505",
+    "comment": ""
+  },
+  {
+    "term": "Pair",
+    "context": "Pair",
+    "reference": "Modals/BluetoothPairingModal.qml:293",
+    "comment": ""
+  },
+  {
+    "term": "Pair Bluetooth Device",
+    "context": "Pair Bluetooth Device",
+    "reference": "Modals/BluetoothPairingModal.qml:103",
+    "comment": ""
+  },
+  {
+    "term": "Pairing failed",
+    "context": "Pairing failed",
+    "reference": "Modals/BluetoothPairingModal.qml:354, Modules/ControlCenter/Details/BluetoothDetail.qml:40",
+    "comment": ""
+  },
+  {
+    "term": "Passkey:",
+    "context": "Passkey:",
+    "reference": "Modals/BluetoothPairingModal.qml:212",
     "comment": ""
   },
   {
@@ -2246,7 +2324,7 @@
   {
     "term": "Place plugins in",
     "context": "Place plugins in",
-    "reference": "Modules/Settings/PluginsTab.qml:623",
+    "reference": "Modules/Settings/PluginsTab.qml:621",
     "comment": ""
   },
   {
@@ -2304,6 +2382,12 @@
     "comment": ""
   },
   {
+    "term": "Plugins:",
+    "context": "Plugins:",
+    "reference": "Modules/Settings/AboutTab.qml:347",
+    "comment": ""
+  },
+  {
     "term": "Popup Position",
     "context": "Popup Position",
     "reference": "Modules/Settings/WidgetTweaksTab.qml:601",
@@ -2348,7 +2432,7 @@
   {
     "term": "Power Profile Degradation",
     "context": "Power Profile Degradation",
-    "reference": "Modules/ControlCenter/Details/BatteryDetail.qml:240, Modules/DankBar/Popouts/BatteryPopout.qml:622",
+    "reference": "Modules/ControlCenter/Details/BatteryDetail.qml:240, Modules/DankBar/Popouts/BatteryPopout.qml:623",
     "comment": ""
   },
   {
@@ -2391,12 +2475,6 @@
     "term": "Profile image is too large. Please use a smaller image.",
     "context": "Profile image is too large. Please use a smaller image.",
     "reference": "Services/PortalService.qml:153",
-    "comment": ""
-  },
-  {
-    "term": "QML, JavaScript, Go",
-    "context": "QML, JavaScript, Go",
-    "reference": "Modules/Settings/AboutTab.qml:355",
     "comment": ""
   },
   {
@@ -2456,7 +2534,7 @@
   {
     "term": "Reload Plugin",
     "context": "Reload Plugin",
-    "reference": "Modules/Settings/PluginsTab.qml:464",
+    "reference": "Modules/Settings/PluginsTab.qml:462",
     "comment": ""
   },
   {
@@ -2475,6 +2553,12 @@
     "term": "Reset",
     "context": "Reset",
     "reference": "Modules/Settings/DankBarTab.qml:1675, Modules/ControlCenter/Components/EditControls.qml:227",
+    "comment": ""
+  },
+  {
+    "term": "Resources",
+    "context": "Resources",
+    "reference": "Modules/Settings/AboutTab.qml:309",
     "comment": ""
   },
   {
@@ -2570,7 +2654,7 @@
   {
     "term": "Search plugins...",
     "context": "Search plugins...",
-    "reference": "Modules/Settings/PluginsTab.qml:940",
+    "reference": "Modules/Settings/PluginsTab.qml:938",
     "comment": ""
   },
   {
@@ -2718,6 +2802,12 @@
     "comment": ""
   },
   {
+    "term": "Show on Last Display",
+    "context": "Show on Last Display",
+    "reference": "Modules/Settings/DisplaysTab.qml:697",
+    "comment": ""
+  },
+  {
     "term": "Show on Overview",
     "context": "Show on Overview",
     "reference": "Modules/Settings/DockTab.qml:232, Modules/Settings/DankBarTab.qml:874",
@@ -2726,13 +2816,13 @@
   {
     "term": "Show on all connected displays",
     "context": "Show on all connected displays",
-    "reference": "Modules/Settings/DisplaysTab.qml:671",
+    "reference": "Modules/Settings/DisplaysTab.qml:681",
     "comment": ""
   },
   {
     "term": "Show on screens:",
     "context": "Show on screens:",
-    "reference": "Modules/Settings/DisplaysTab.qml:655",
+    "reference": "Modules/Settings/DisplaysTab.qml:666",
     "comment": ""
   },
   {
@@ -2828,7 +2918,7 @@
   {
     "term": "Spacing",
     "context": "Spacing",
-    "reference": "Modules/Settings/DockTab.qml:426, Modules/Settings/DankBarTab.qml:933",
+    "reference": "Modules/Settings/DockTab.qml:492, Modules/Settings/DankBarTab.qml:933",
     "comment": ""
   },
   {
@@ -2840,7 +2930,7 @@
   {
     "term": "Start",
     "context": "Start",
-    "reference": "Modules/Settings/DisplaysTab.qml:275",
+    "reference": "Modules/Settings/DisplaysTab.qml:286",
     "comment": ""
   },
   {
@@ -2859,6 +2949,12 @@
     "term": "Storage & Disks",
     "context": "Storage & Disks",
     "reference": "Modules/ProcessList/SystemTab.qml:414",
+    "comment": ""
+  },
+  {
+    "term": "Support Development",
+    "context": "Support Development",
+    "reference": "Modules/Settings/AboutTab.qml:471",
     "comment": ""
   },
   {
@@ -2930,7 +3026,7 @@
   {
     "term": "System Monitoring:",
     "context": "System Monitoring:",
-    "reference": "Modules/Settings/AboutTab.qml:448",
+    "reference": "Modules/Settings/AboutTab.qml:405",
     "comment": ""
   },
   {
@@ -2994,15 +3090,9 @@
     "comment": ""
   },
   {
-    "term": "Technical Details",
-    "context": "Technical Details",
-    "reference": "Modules/Settings/AboutTab.qml:310",
-    "comment": ""
-  },
-  {
     "term": "Temperature",
     "context": "Temperature",
-    "reference": "Modules/Settings/DisplaysTab.qml:144",
+    "reference": "Modules/Settings/DisplaysTab.qml:155",
     "comment": ""
   },
   {
@@ -3044,13 +3134,13 @@
   {
     "term": "Third-Party Plugin Warning",
     "context": "Third-Party Plugin Warning",
-    "reference": "Modules/Settings/PluginsTab.qml:1249",
+    "reference": "Modules/Settings/PluginsTab.qml:1247",
     "comment": ""
   },
   {
     "term": "Third-party plugins are created by the community and are not officially supported by DankMaterialShell.\\n\\nThese plugins may pose security and privacy risks - install at your own risk.",
     "context": "Third-party plugins are created by the community and are not officially supported by DankMaterialShell.\\n\\nThese plugins may pose security and privacy risks - install at your own risk.",
-    "reference": "Modules/Settings/PluginsTab.qml:1259",
+    "reference": "Modules/Settings/PluginsTab.qml:1257",
     "comment": ""
   },
   {
@@ -3074,13 +3164,13 @@
   {
     "term": "To Full",
     "context": "To Full",
-    "reference": "Modules/DankBar/Popouts/BatteryPopout.qml:535",
+    "reference": "Modules/DankBar/Popouts/BatteryPopout.qml:536",
     "comment": ""
   },
   {
     "term": "To update, run the following command:",
     "context": "To update, run the following command:",
-    "reference": "Services/DMSService.qml:236",
+    "reference": "Services/DMSService.qml:230",
     "comment": ""
   },
   {
@@ -3140,7 +3230,7 @@
   {
     "term": "Uninstall Plugin",
     "context": "Uninstall Plugin",
-    "reference": "Modules/Settings/PluginsTab.qml:418",
+    "reference": "Modules/Settings/PluginsTab.qml:416",
     "comment": ""
   },
   {
@@ -3182,7 +3272,7 @@
   {
     "term": "Update Plugin",
     "context": "Update Plugin",
-    "reference": "Modules/Settings/PluginsTab.qml:368",
+    "reference": "Modules/Settings/PluginsTab.qml:367",
     "comment": ""
   },
   {
@@ -3212,7 +3302,7 @@
   {
     "term": "Use IP Location",
     "context": "Use IP Location",
-    "reference": "Modules/Settings/DisplaysTab.qml:368",
+    "reference": "Modules/Settings/DisplaysTab.qml:379",
     "comment": ""
   },
   {
@@ -3278,7 +3368,7 @@
   {
     "term": "Uses sunrise/sunset times to automatically adjust night mode based on your location.",
     "context": "Uses sunrise/sunset times to automatically adjust night mode based on your location.",
-    "reference": "Modules/Settings/DisplaysTab.qml:446",
+    "reference": "Modules/Settings/DisplaysTab.qml:457",
     "comment": ""
   },
   {
@@ -3372,6 +3462,12 @@
     "comment": ""
   },
   {
+    "term": "Website:",
+    "context": "Website:",
+    "reference": "Modules/Settings/AboutTab.qml:324",
+    "comment": ""
+  },
+  {
     "term": "When enabled, apps are sorted alphabetically. When disabled, apps are sorted by usage frequency.",
     "context": "When enabled, apps are sorted alphabetically. When disabled, apps are sorted by usage frequency.",
     "reference": "Modules/Settings/LauncherTab.qml:517",
@@ -3380,13 +3476,13 @@
   {
     "term": "WiFi disabled",
     "context": "WiFi disabled",
-    "reference": "Services/NetworkManagerService.qml:498",
+    "reference": "Services/NetworkManagerService.qml:474",
     "comment": ""
   },
   {
     "term": "WiFi enabled",
     "context": "WiFi enabled",
-    "reference": "Services/NetworkManagerService.qml:498, Services/NetworkManagerService.qml:510",
+    "reference": "Services/NetworkManagerService.qml:474, Services/NetworkManagerService.qml:486",
     "comment": ""
   },
   {
@@ -3500,19 +3596,19 @@
   {
     "term": "official",
     "context": "official",
-    "reference": "Modules/Settings/PluginsTab.qml:1056",
+    "reference": "Modules/Settings/PluginsTab.qml:1054",
     "comment": ""
   },
   {
     "term": "update dms for NM integration.",
     "context": "update dms for NM integration.",
-    "reference": "Modules/ControlCenter/Components/DragDropGrid.qml:201",
+    "reference": "Modules/ControlCenter/Components/DragDropGrid.qml:204",
     "comment": ""
   },
   {
     "term": "• Install only from trusted sources",
     "context": "• Install only from trusted sources",
-    "reference": "Modules/Settings/PluginsTab.qml:1282",
+    "reference": "Modules/Settings/PluginsTab.qml:1280",
     "comment": ""
   },
   {
@@ -3542,13 +3638,13 @@
   {
     "term": "• Plugins may contain bugs or security issues",
     "context": "• Plugins may contain bugs or security issues",
-    "reference": "Modules/Settings/PluginsTab.qml:1270",
+    "reference": "Modules/Settings/PluginsTab.qml:1268",
     "comment": ""
   },
   {
     "term": "• Review code before installation when possible",
     "context": "• Review code before installation when possible",
-    "reference": "Modules/Settings/PluginsTab.qml:1276",
+    "reference": "Modules/Settings/PluginsTab.qml:1274",
     "comment": ""
   },
   {

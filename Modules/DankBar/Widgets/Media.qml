@@ -45,53 +45,26 @@ BasePill {
             implicitHeight: root.playerAvailable ? root.currentContentHeight : 0
             opacity: root.playerAvailable ? 1 : 0
 
-            states: [
-                State {
-                    name: "shown"
-                    when: root.playerAvailable
-                    PropertyChanges {
-                        target: parent
-                        opacity: 1
-                        implicitWidth: root.currentContentWidth
-                        implicitHeight: root.currentContentHeight
-                    }
-                },
-                State {
-                    name: "hidden"
-                    when: !root.playerAvailable
-                    PropertyChanges {
-                        target: parent
-                        opacity: 0
-                        implicitWidth: 0
-                        implicitHeight: 0
-                    }
+            Behavior on opacity {
+                NumberAnimation {
+                    duration: Theme.shortDuration
+                    easing.type: Theme.standardEasing
                 }
-            ]
-            transitions: [
-                Transition {
-                    from: "shown"
-                    to: "hidden"
-                    SequentialAnimation {
-                        PauseAnimation {
-                            duration: 500
-                        }
-                        NumberAnimation {
-                            properties: "opacity,implicitWidth,implicitHeight"
-                            duration: Theme.shortDuration
-                            easing.type: Theme.standardEasing
-                        }
-                    }
-                },
-                Transition {
-                    from: "hidden"
-                    to: "shown"
-                    NumberAnimation {
-                        properties: "opacity,implicitWidth,implicitHeight"
-                        duration: Theme.shortDuration
-                        easing.type: Theme.standardEasing
-                    }
+            }
+
+            Behavior on implicitWidth {
+                NumberAnimation {
+                    duration: Theme.shortDuration
+                    easing.type: Theme.standardEasing
                 }
-            ]
+            }
+
+            Behavior on implicitHeight {
+                NumberAnimation {
+                    duration: Theme.shortDuration
+                    easing.type: Theme.standardEasing
+                }
+            }
 
             Column {
                 id: verticalLayout
@@ -189,7 +162,7 @@ BasePill {
 
                         anchors.verticalCenter: parent.verticalCenter
                         width: textWidth
-                        height: 20
+                        height: root.widgetThickness
                         visible: SettingsData.mediaSize > 0
                         clip: true
                         color: "transparent"
@@ -203,7 +176,6 @@ BasePill {
                             text: textContainer.displayText
                             font.pixelSize: Theme.barTextSize(root.barThickness)
                             color: Theme.surfaceText
-                            font.weight: Font.Medium
                             wrapMode: Text.NoWrap
                             x: needsScrolling ? -scrollOffset : 0
                             onTextChanged: {

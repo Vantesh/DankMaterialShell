@@ -137,6 +137,15 @@
   "Audio Output Devices (": {
     "Audio Output Devices (": "Dispositivos de Saída de Áudio ("
   },
+  "Authorize": {
+    "Authorize": ""
+  },
+  "Authorize pairing with ": {
+    "Authorize pairing with ": ""
+  },
+  "Authorize service for ": {
+    "Authorize service for ": ""
+  },
   "Auto Location": {
     "Auto Location": "Localização Automática"
   },
@@ -362,6 +371,12 @@
   "Configure which displays show shell components": {
     "Configure which displays show shell components": "Configurar em quais telas serão mostrados os componentes do shell"
   },
+  "Confirm": {
+    "Confirm": ""
+  },
+  "Confirm passkey for ": {
+    "Confirm passkey for ": ""
+  },
   "Connect": {
     "Connect": "Conectar"
   },
@@ -491,6 +506,9 @@
   "Device": {
     "Device": "Dispositivo"
   },
+  "Device paired": {
+    "Device paired": ""
+  },
   "Disconnect": {
     "Disconnect": "Desconectar"
   },
@@ -545,6 +563,9 @@
   "Domain (optional)": {
     "Domain (optional)": ""
   },
+  "Donate on Ko-fi": {
+    "Donate on Ko-fi": ""
+  },
   "Drag widgets to reorder within sections. Use the eye icon to hide/show widgets (maintains spacing), or X to remove them completely.": {
     "Drag widgets to reorder within sections. Use the eye icon to hide/show widgets (maintains spacing), or X to remove them completely.": "Arraste Widgets para reordená-los nas seções. Use o ícone de olho para esconder ou mostrá-los (manter o espaçamento), ou clique no X para removê-los por completo."
   },
@@ -584,6 +605,15 @@
   "End": {
     "End": "Fim"
   },
+  "Enter 6-digit passkey": {
+    "Enter 6-digit passkey": ""
+  },
+  "Enter PIN": {
+    "Enter PIN": ""
+  },
+  "Enter PIN for ": {
+    "Enter PIN for ": ""
+  },
   "Enter credentials for ": {
     "Enter credentials for ": "Insira as credenciais para "
   },
@@ -595,6 +625,9 @@
   },
   "Enter filename...": {
     "Enter filename...": "Insira nome do arquivo..."
+  },
+  "Enter passkey for ": {
+    "Enter passkey for ": ""
   },
   "Enter password for ": {
     "Enter password for ": "Insira senha para "
@@ -619,6 +652,9 @@
   },
   "Failed to enable WiFi": {
     "Failed to enable WiFi": ""
+  },
+  "Failed to remove device": {
+    "Failed to remove device": ""
   },
   "Failed to set profile image": {
     "Failed to set profile image": ""
@@ -781,6 +817,9 @@
   },
   "Incorrect password": {
     "Incorrect password": ""
+  },
+  "Indicator Style": {
+    "Indicator Style": ""
   },
   "Individual Batteries": {
     "Individual Batteries": "Baterias Individuais"
@@ -1100,6 +1139,18 @@
   "Padding": {
     "Padding": "Preenchimento"
   },
+  "Pair": {
+    "Pair": ""
+  },
+  "Pair Bluetooth Device": {
+    "Pair Bluetooth Device": ""
+  },
+  "Pairing failed": {
+    "Pairing failed": ""
+  },
+  "Passkey:": {
+    "Passkey:": ""
+  },
   "Password": {
     "Password": "Senha"
   },
@@ -1156,6 +1207,9 @@
   },
   "Plugins": {
     "Plugins": "Plugins"
+  },
+  "Plugins:": {
+    "Plugins:": ""
   },
   "Popup Position": {
     "Popup Position": "Posição do Popup"
@@ -1243,6 +1297,9 @@
   },
   "Reset": {
     "Reset": "Resetar"
+  },
+  "Resources": {
+    "Resources": ""
   },
   "Right": {
     "Right": ""
@@ -1364,6 +1421,9 @@
   "Show Workspace Apps": {
     "Show Workspace Apps": "Mostrar Aplicativos da Área de Trabalho Virtual"
   },
+  "Show on Last Display": {
+    "Show on Last Display": ""
+  },
   "Show on Overview": {
     "Show on Overview": "Mostrar na Visão Geral"
   },
@@ -1435,6 +1495,9 @@
   },
   "Storage & Disks": {
     "Storage & Disks": "Armazenamento & Discos"
+  },
+  "Support Development": {
+    "Support Development": ""
   },
   "Surface": {
     "Surface": "Superfície"
@@ -1693,6 +1756,9 @@
   },
   "Weather Widget": {
     "Weather Widget": "Widget de Clima"
+  },
+  "Website:": {
+    "Website:": ""
   },
   "When enabled, apps are sorted alphabetically. When disabled, apps are sorted by usage frequency.": {
     "When enabled, apps are sorted alphabetically. When disabled, apps are sorted by usage frequency.": "Quando ativado, apps são ordenados alfabeticamente. Quando desativado, apps são ordenados por frequência de uso"

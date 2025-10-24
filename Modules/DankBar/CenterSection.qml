@@ -13,8 +13,10 @@ Item {
     property var parentScreen: null
     property real widgetThickness: 30
     property real barThickness: 48
+    property bool overrideAxisLayout: false
+    property bool forceVerticalLayout: false
 
-    readonly property bool isVertical: axis?.isVertical ?? false
+    readonly property bool isVertical: overrideAxisLayout ? forceVerticalLayout : (axis?.isVertical ?? false)
     readonly property real spacing: noBackground ? 2 : Theme.spacingXS
 
     property var centerWidgets: []
@@ -396,8 +398,47 @@ Item {
                 if ("barThickness" in item) {
                     item.barThickness = Qt.binding(() => root.barThickness)
                 }
+                if ("sectionSpacing" in item) {
+                    item.sectionSpacing = Qt.binding(() => root.spacing)
+                }
 
-                // Inject PluginService for plugin widgets
+                if ("isFirst" in item) {
+                    item.isFirst = Qt.binding(() => {
+                        for (var i = 0; i < centerRepeater.count; i++) {
+                            const checkItem = centerRepeater.itemAt(i)
+                            if (checkItem && checkItem.active && checkItem.item) {
+                                return checkItem.item === item
+                            }
+                        }
+                        return false
+                    })
+                }
+
+                if ("isLast" in item) {
+                    item.isLast = Qt.binding(() => {
+                        for (var i = centerRepeater.count - 1; i >= 0; i--) {
+                            const checkItem = centerRepeater.itemAt(i)
+                            if (checkItem && checkItem.active && checkItem.item) {
+                                return checkItem.item === item
+                            }
+                        }
+                        return false
+                    })
+                }
+
+                if ("isLeftBarEdge" in item) {
+                    item.isLeftBarEdge = false
+                }
+                if ("isRightBarEdge" in item) {
+                    item.isRightBarEdge = false
+                }
+                if ("isTopBarEdge" in item) {
+                    item.isTopBarEdge = false
+                }
+                if ("isBottomBarEdge" in item) {
+                    item.isBottomBarEdge = false
+                }
+
                 if (item.pluginService !== undefined) {
                     var parts = model.widgetId.split(":")
                     var pluginId = parts[0]

@@ -235,11 +235,11 @@ Item {
             Connections {
                 target: PluginService
                 function onPluginLoaded(pluginId) {
-                    console.log("DankBar: Plugin loaded:", pluginId)
+                    console.info("DankBar: Plugin loaded:", pluginId)
                     SettingsData.widgetDataChanged()
                 }
                 function onPluginUnloaded(pluginId) {
-                    console.log("DankBar: Plugin unloaded:", pluginId)
+                    console.info("DankBar: Plugin unloaded:", pluginId)
                     SettingsData.widgetDataChanged()
                 }
             }
@@ -585,18 +585,18 @@ Item {
                                 function getWidgetSection(parentItem) {
                                     let current = parentItem
                                     while (current) {
-                                        if (current.objectName === "leftSection" || current === hLeftSection || current === vLeftSection) {
+                                        if (current.objectName === "leftSection") {
                                             return "left"
                                         }
-                                        if (current.objectName === "centerSection" || current === hCenterSection || current === vCenterSection) {
+                                        if (current.objectName === "centerSection") {
                                             return "center"
                                         }
-                                        if (current.objectName === "rightSection" || current === hRightSection || current === vRightSection) {
+                                        if (current.objectName === "rightSection") {
                                             return "right"
                                         }
                                         current = current.parent
                                     }
-                                    return "left" // fallback
+                                    return "left"
                                 }
 
                                 readonly property var widgetVisibility: ({
@@ -695,6 +695,9 @@ Item {
 
                                         LeftSection {
                                             id: hLeftSection
+                                            objectName: "leftSection"
+                                            overrideAxisLayout: true
+                                            forceVerticalLayout: false
                                             anchors {
                                                 left: parent.left
                                                 verticalCenter: parent.verticalCenter
@@ -710,6 +713,9 @@ Item {
 
                                         RightSection {
                                             id: hRightSection
+                                            objectName: "rightSection"
+                                            overrideAxisLayout: true
+                                            forceVerticalLayout: false
                                             anchors {
                                                 right: parent.right
                                                 verticalCenter: parent.verticalCenter
@@ -725,6 +731,9 @@ Item {
 
                                         CenterSection {
                                             id: hCenterSection
+                                            objectName: "centerSection"
+                                            overrideAxisLayout: true
+                                            forceVerticalLayout: false
                                             anchors {
                                                 verticalCenter: parent.verticalCenter
                                                 horizontalCenter: parent.horizontalCenter
@@ -746,6 +755,9 @@ Item {
 
                                         LeftSection {
                                             id: vLeftSection
+                                            objectName: "leftSection"
+                                            overrideAxisLayout: true
+                                            forceVerticalLayout: true
                                             width: parent.width
                                             anchors {
                                                 top: parent.top
@@ -762,6 +774,9 @@ Item {
 
                                         CenterSection {
                                             id: vCenterSection
+                                            objectName: "centerSection"
+                                            overrideAxisLayout: true
+                                            forceVerticalLayout: true
                                             width: parent.width
                                             anchors {
                                                 verticalCenter: parent.verticalCenter
@@ -778,6 +793,9 @@ Item {
 
                                         RightSection {
                                             id: vRightSection
+                                            objectName: "rightSection"
+                                            overrideAxisLayout: true
+                                            forceVerticalLayout: true
                                             width: parent.width
                                             height: implicitHeight
                                             anchors {
@@ -814,6 +832,7 @@ Item {
                                     id: launcherButtonComponent
 
                                     LauncherButton {
+                                        id: launcherButton
                                         isActive: false
                                         widgetThickness: barWindow.widgetThickness
                                         barThickness: barWindow.effectiveBarThickness
@@ -823,6 +842,12 @@ Item {
                                         hyprlandOverviewLoader: root.hyprlandOverviewLoader
                                         onClicked: {
                                             appDrawerLoader.active = true
+                                            if (appDrawerLoader.item && appDrawerLoader.item.setTriggerPosition) {
+                                                const globalPos = launcherButton.visualContent.mapToGlobal(0, 0)
+                                                const currentScreen = barWindow.screen
+                                                const pos = SettingsData.getPopupTriggerPosition(globalPos, currentScreen, barWindow.effectiveBarThickness, launcherButton.visualWidth)
+                                                appDrawerLoader.item.setTriggerPosition(pos.x, pos.y, pos.width, launcherButton.section, currentScreen)
+                                            }
                                             appDrawerLoader.item?.toggle()
                                         }
                                     }
@@ -1214,13 +1239,19 @@ Item {
                                 Component {
                                     id: separatorComponent
 
-                                    Rectangle {
-                                        width: barWindow.isVertical ? barWindow.widgetThickness * 0.67 : 1
-                                        height: barWindow.isVertical ? 1 : barWindow.widgetThickness * 0.67
+                                    Item {
+                                        width: barWindow.isVertical ? parent.barThickness : 1
+                                        height: barWindow.isVertical ? 1 : parent.barThickness
                                         implicitWidth: width
                                         implicitHeight: height
-                                        color: Theme.outline
-                                        opacity: 0.3
+
+                                        Rectangle {
+                                            width: barWindow.isVertical ? parent.width * 0.6 : 1
+                                            height: barWindow.isVertical ? 1 : parent.height * 0.6
+                                            anchors.centerIn: parent
+                                            color: Theme.outline
+                                            opacity: 0.3
+                                        }
                                     }
                                 }
 

@@ -66,9 +66,11 @@ Singleton {
         }
     }
 
-    function setBrightness(percentage, device) {
+    function setBrightness(percentage, device, suppressOsd) {
         setBrightnessInternal(percentage, device)
-        brightnessChanged()
+        if (!suppressOsd) {
+            brightnessChanged()
+        }
     }
 
     function setCurrentDevice(deviceName, saveToSession = false) {
@@ -509,7 +511,7 @@ Singleton {
             if (ddcAvailable) {
                 ddcDisplayDetectionProcess.running = true
             } else {
-                console.log("DisplayService: ddcutil not available")
+                console.info("DisplayService: ddcutil not available")
             }
         }
     }
@@ -545,7 +547,7 @@ Singleton {
                     }
 
                     ddcDevices = newDdcDevices
-                    console.log("DisplayService: Found", ddcDevices.length, "DDC displays")
+                    console.info("DisplayService: Found", ddcDevices.length, "DDC displays")
 
                     // Queue initial brightness readings for DDC devices
                     ddcInitQueue = []

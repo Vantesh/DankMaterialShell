@@ -137,6 +137,15 @@
   "Audio Output Devices (": {
     "Audio Output Devices (": "オーディオ出力デバイス（"
   },
+  "Authorize": {
+    "Authorize": "許可"
+  },
+  "Authorize pairing with ": {
+    "Authorize pairing with ": "ペアリングを許可 "
+  },
+  "Authorize service for ": {
+    "Authorize service for ": "サービスを許可 "
+  },
   "Auto Location": {
     "Auto Location": "自動位置検出"
   },
@@ -362,6 +371,12 @@
   "Configure which displays show shell components": {
     "Configure which displays show shell components": "シェルコンポーネントを表示するディスプレイを配置"
   },
+  "Confirm": {
+    "Confirm": "確認"
+  },
+  "Confirm passkey for ": {
+    "Confirm passkey for ": "パスキーを確認 "
+  },
   "Connect": {
     "Connect": "接続"
   },
@@ -491,6 +506,9 @@
   "Device": {
     "Device": "デバイス"
   },
+  "Device paired": {
+    "Device paired": "デバイスがペアリングされました"
+  },
   "Disconnect": {
     "Disconnect": "切断"
   },
@@ -545,6 +563,9 @@
   "Domain (optional)": {
     "Domain (optional)": "ドメイン (オプション)"
   },
+  "Donate on Ko-fi": {
+    "Donate on Ko-fi": "Ko-fiで寄付"
+  },
   "Drag widgets to reorder within sections. Use the eye icon to hide/show widgets (maintains spacing), or X to remove them completely.": {
     "Drag widgets to reorder within sections. Use the eye icon to hide/show widgets (maintains spacing), or X to remove them completely.": "ウィジェットをドラッグしてセクション内で順序を変更できます。目のアイコンでウィジェットを表示/非表示に（スペースは維持）、Xで完全に削除できます。"
   },
@@ -584,6 +605,15 @@
   "End": {
     "End": "終わり"
   },
+  "Enter 6-digit passkey": {
+    "Enter 6-digit passkey": "6桁のパスキーを入力してください"
+  },
+  "Enter PIN": {
+    "Enter PIN": "PINを入力してください"
+  },
+  "Enter PIN for ": {
+    "Enter PIN for ": "PINを入力してください "
+  },
   "Enter credentials for ": {
     "Enter credentials for ": "資格情報を入力"
   },
@@ -595,6 +625,9 @@
   },
   "Enter filename...": {
     "Enter filename...": "ファイル名を入力してください..."
+  },
+  "Enter passkey for ": {
+    "Enter passkey for ": "パスキーを入力してください "
   },
   "Enter password for ": {
     "Enter password for ": "パスワードを入力"
@@ -619,6 +652,9 @@
   },
   "Failed to enable WiFi": {
     "Failed to enable WiFi": "WiFiを有効化にできませんでした"
+  },
+  "Failed to remove device": {
+    "Failed to remove device": "デバイスの削除に失敗しました"
   },
   "Failed to set profile image": {
     "Failed to set profile image": "プロフィール画像の設定に失敗しました"
@@ -781,6 +817,9 @@
   },
   "Incorrect password": {
     "Incorrect password": "パスワードが間違っています"
+  },
+  "Indicator Style": {
+    "Indicator Style": "インジケータースタイル"
   },
   "Individual Batteries": {
     "Individual Batteries": "バッテリーごと"
@@ -1100,6 +1139,18 @@
   "Padding": {
     "Padding": "パディング"
   },
+  "Pair": {
+    "Pair": "ペアリング"
+  },
+  "Pair Bluetooth Device": {
+    "Pair Bluetooth Device": "Bluetoothデバイスのペアリング"
+  },
+  "Pairing failed": {
+    "Pairing failed": "ペアリングが失敗しました"
+  },
+  "Passkey:": {
+    "Passkey:": "パスキー："
+  },
   "Password": {
     "Password": "パスワード"
   },
@@ -1156,6 +1207,9 @@
   },
   "Plugins": {
     "Plugins": "プラグイン"
+  },
+  "Plugins:": {
+    "Plugins:": "プラグイン："
   },
   "Popup Position": {
     "Popup Position": "ポップアップの位置"
@@ -1233,7 +1287,7 @@
     "Refresh": "リフレッシュ"
   },
   "Reload Plugin": {
-    "Reload Plugin": ""
+    "Reload Plugin": "プラグインをリロード"
   },
   "Remove": {
     "Remove": "削除"
@@ -1243,6 +1297,9 @@
   },
   "Reset": {
     "Reset": "リセット"
+  },
+  "Resources": {
+    "Resources": "リソース"
   },
   "Right": {
     "Right": "右"
@@ -1364,6 +1421,9 @@
   "Show Workspace Apps": {
     "Show Workspace Apps": "ワークスペースアプリを表示"
   },
+  "Show on Last Display": {
+    "Show on Last Display": "最後のディスプレイに表示"
+  },
   "Show on Overview": {
     "Show on Overview": "概要に表示"
   },
@@ -1435,6 +1495,9 @@
   },
   "Storage & Disks": {
     "Storage & Disks": "ストレージとディスク"
+  },
+  "Support Development": {
+    "Support Development": "開発をサポート"
   },
   "Surface": {
     "Surface": "表面"
@@ -1575,7 +1638,7 @@
     "Turn off monitors after": "後にモニターの電源を切る"
   },
   "Uninstall Plugin": {
-    "Uninstall Plugin": ""
+    "Uninstall Plugin": "プラグインをアンインストール"
   },
   "Unpin from Dock": {
     "Unpin from Dock": "ドックから固定を解除"
@@ -1596,7 +1659,7 @@
     "Update All": "すべて更新"
   },
   "Update Plugin": {
-    "Update Plugin": ""
+    "Update Plugin": "プラグインを更新"
   },
   "Use 24-hour time format instead of 12-hour AM/PM": {
     "Use 24-hour time format instead of 12-hour AM/PM": "12時間制のAM/PMではなく、24時間表記を使用"
@@ -1693,6 +1756,9 @@
   },
   "Weather Widget": {
     "Weather Widget": "天気ウィジェット"
+  },
+  "Website:": {
+    "Website:": "ウェブサイト："
   },
   "When enabled, apps are sorted alphabetically. When disabled, apps are sorted by usage frequency.": {
     "When enabled, apps are sorted alphabetically. When disabled, apps are sorted by usage frequency.": "有効にすると、アプリはアルファベット順に並べ替えられます。無効にすると、アプリは使用頻度で並べ替えられます。"
