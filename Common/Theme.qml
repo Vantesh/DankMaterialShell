@@ -199,10 +199,10 @@ Singleton {
                 "surfaceContainer": getMatugenColor("surface_container", "#1e2023"),
                 "surfaceContainerHigh": getMatugenColor("surface_container_high", "#292b2f"),
                 "surfaceContainerHighest": getMatugenColor("surface_container_highest", "#343740"),
-                "error": "#F2B8B5",
-                "warning": "#FF9800",
-                "info": "#2196F3",
-                "success": "#4CAF50"
+                "error": getMatugenColor("error", "#F2B8B5"),
+                "warning": getMatugenColor("warning", "#FF9800"),
+                "info": getMatugenColor("info", "#2196F3"),
+                "success": getMatugenColor("success", "#4CAF50"),
             }
         } else {
             return StockThemes.getThemeByName(currentTheme, isLightMode)
